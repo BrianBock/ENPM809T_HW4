@@ -11,7 +11,7 @@ import datetime
 import time
 import statistics
 
-filepath="dataFile.txt"
+filepath="20200224-215822 data.txt"
 
 # Import the data
 dataFile = open(filepath,"r")
@@ -36,7 +36,7 @@ plt.hist(delta_time,20,ec='black')
 #plt.plot(x,y,label='Original Data')
 plt.xlabel('Processing Time (ms)')
 plt.ylabel('Number of Frames')
-plt.title("Processing Time (No Object in Frame)")
+plt.title("Processing Time")
 
 print(statistics.mean(delta_time))
 
@@ -45,9 +45,9 @@ plt.figure()
 # Create a list of frames (1-len(data))
 framecount=list(range(1, len(data)))
 plt.plot(framecount,delta_time,'.-')
-plt.ylabel('Frame')
-plt.xlabel('Processing Time (ms)')
-plt.title("Processing Time (No Object in Frame)")
+plt.xlabel('Frame')
+plt.ylabel('Processing Time (ms)')
+plt.title("Processing Time")
 
 #plt.legend()
 plt.show()
